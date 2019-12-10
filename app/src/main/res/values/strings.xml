@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Learn Intent</string>
+    <string name="user_name">Username</string>
+    <string name="score">Score level</string>
+    <string name="button_practice">Practice</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="button_create">Create</string>
+    <string name="validation_username">Enter valid username</string>
+    <string name="validation_gender">Choose your sex</string>
+</resources>

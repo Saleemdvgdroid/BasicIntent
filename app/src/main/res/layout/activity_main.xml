@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_padding"
+    tools:context=".MainActivity">
+
+  <ImageView
+      android:tint="@color/design_default_color_primary_dark"
+      android:id="@+id/image_view"
+      android:src="@drawable/ic_user"
+      app:layout_constraintVertical_bias="0.2"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_width="@dimen/width_icon"
+      android:layout_height="@dimen/height_icon"/>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/user_ti_lay"
+      app:layout_constraintVertical_bias="0.3"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/image_view"
+      android:hint="@string/user_name">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/user_ti_et"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/score_ti_lay"
+      app:layout_constraintVertical_bias="0.2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/user_ti_lay"
+      android:hint="@string/score">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/score_ti_et"
+        android:imeOptions="actionDone"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <RadioGroup
+      android:id="@+id/gender_rg"
+      app:layout_constraintTop_toBottomOf="@+id/score_ti_lay"
+      app:layout_constraintBottom_toTopOf="@+id/button"
+      app:layout_constraintVertical_bias="0.3"
+      android:layout_width="match_parent"
+      android:orientation="horizontal"
+      android:weightSum="1"
+      android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/male"
+        android:layout_width="wrap_content"
+        android:text="@string/male"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/female"
+        android:layout_width="wrap_content"
+        android:text="@string/female"
+        android:layout_height="wrap_content"/>
+  </RadioGroup>
+
+  <com.google.android.material.button.MaterialButton
+      android:text="@string/button_practice"
+      android:id="@+id/button"
+      android:layout_marginEnd="@dimen/default_padding"
+      android:layout_marginStart="@dimen/default_padding"
+      android:padding="@dimen/default_padding"
+      app:layout_constraintVertical_bias="0.5"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/score_ti_lay"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
